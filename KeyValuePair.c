@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #define SIZE 100003 // 100003 is prime
 
 typedef struct KeyValuePair {
@@ -6,7 +7,7 @@ typedef struct KeyValuePair {
 } KeyValuePair;
 
 KeyValuePair* KeyValuePair_new() { 
-  KeyValuePair* kv = malloc(sizeof(KeyValuePair));
+  KeyValuePair* kv = (KeyValuePair*) malloc(sizeof(KeyValuePair));
   int i = 0;
   for (i = 0; i < SIZE; i++) {
 	  kv->key[i] = -1;
